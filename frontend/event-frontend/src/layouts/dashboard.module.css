@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(17,17,17);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.content{
+    height: 90%;
+    width: 90%;
+    margin-left: 125px;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+}
+.content_for_home{
+    height: 90%;
+    width: 90%;
+    margin-left: 125px;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+    display: grid;
+    grid:
+    "first first first first first first second second second" 1fr
+    "first first first first first first second second second" 1fr
+    "third third third third third third second second second" 1fr
+    "third third third third third third second second second" 1fr
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 8px;
+}
+.content_for_add_event{
+    height: 90%;
+    width: 90%;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+    margin-left: 125px;
+}
+.content_for_all_events{
+    height: 90%;
+    width: 90%;
+    margin-left: 110px;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+    display: flex;
+}
+.content_for_profile{
+    height: 90%;
+    width: 90%;
+    margin-left: 125px;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+    display: grid;
+        grid: 
+        "profile profile event1 event1" 1fr
+        "profile profile event1 event1" 1fr
+        "profile profile event2 event2" 1fr
+        "artist artist event2 event2" 1fr
+        /1fr 1fr 1fr 1fr
+        ;
+        gap: 10px;
+}

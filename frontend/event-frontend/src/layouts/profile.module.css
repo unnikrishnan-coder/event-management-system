@@ -1,0 +1,178 @@
+/* content style */
+
+
+.btn_primary{
+    grid-area: button;
+    background-color: rgb(234,78,79);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+input{
+    transition: all 0.2s;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+input:focus{
+    border: 2px solid #bb00ff;
+}
+/* event cards style */
+.reg_events_card{
+    grid-area: event1;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+}
+.my_events_card{
+    grid-area: event2;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+}
+.reg_events_card,.my_events_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.reg_events,.my_events{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.event{
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 20px;
+    color: #fff;
+    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.event >img{
+    width: 100%;
+    border-radius: 20px;
+}
+.event > span > img{
+    width: 20px;
+    border-radius: 50%;
+}
+.event > span{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+/* profile card styles */
+.profile_card{
+    grid-area: profile;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+.profile_card > .details{
+    display: grid;
+    grid: 
+    "fname lname" 1fr
+    "email c-number" 1fr
+    "dob pincode" 1fr
+    "address address" 1fr
+    "button button" 1fr
+    /1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+.profile_card > .details > *{
+    max-height: 50px;
+}
+.profile_card > .details > #fname{
+    grid-area: fname;
+}
+.profile_card > .details > #lname{
+    grid-area: lname;
+}
+.profile_card > .details > #email{
+    grid-area: email;
+}
+.profile_card > .details > #c-number{
+    grid-area: c-number;
+}
+.profile_card > .details > #dob{
+    grid-area: dob;
+}
+.profile_card > .details > #pincode{
+    grid-area: pincode;
+}
+.profile_card > .details > #address{
+    grid-area: address;
+}
+.profile_card > .details > button{
+    grid-area: button;
+}
+
+/* artist cards styles */
+.artist_cards{
+    grid-area: artist;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+}
+.artists{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    gap: 10px;
+}
+.artist{
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: #fff;
+    cursor:pointer;
+    display: flex;
+}
+.artist .p-h2{
+    font-size: 14px;
+}
+.artist .p-h3{
+    font-size: 14px;
+}
+.linear{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.linear  .text-content{
+    margin: 0 10px;
+}
+.linear > img{
+    border-radius: 50%;
+    height: 50px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.title > h1{
+    font-size: 2rem;
+    color: #fff;
+}
+.follow_btn{
+    font-size: 15px;
+    color: #fff;
+    background-color: #4f4f4f;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

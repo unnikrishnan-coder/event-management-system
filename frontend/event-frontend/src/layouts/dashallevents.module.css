@@ -1,0 +1,110 @@
+.content{
+    display: flex;
+    margin-left: 100px;
+}
+main::-webkit-scrollbar{
+    display: none;
+}
+.sidebar{
+    position: fixed;
+}
+.register_card{
+    padding: 20px;
+    margin-left: 20px;
+    background-color: rgb(0, 0, 0);
+    height: max-content;
+    position: fixed;
+    top: 5%;
+    right: 3%;
+    width: 400px;
+}
+.register_card>img{
+    height: 40%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.register_card > .share img{
+    width: 16px;
+    cursor: pointer;
+}
+.register_card > h1{
+    margin: 20px 0 20px 0;
+}
+.register_card > .text-content{
+    display: grid;
+    grid: 
+    "venue cost" 1fr
+    "date org" 1fr
+    /1fr 1fr;
+    gap: 8px;
+    margin-top: 20px;
+}
+.register_card> .text-content >  .venue{
+    grid-area: venue;
+}
+.register_card> .text-content >  .cost{
+    grid-area: cost;
+}
+.register_card> .text-content >  .date{
+    grid-area: date;
+}
+.register_card> .text-content >  .organizer{
+    grid-area: org;
+}
+.register_card > button{
+    height: 50px;
+    font-size: 16px;
+    margin: 20px 0;
+}
+.register_card > .share img{
+    margin: 5px 10px 0 0;
+}
+
+/* events */
+.reg_events_card{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+}
+.reg_events{
+    display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+}
+.event{
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 20px;
+    color: #fff;
+    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.event >img{
+    width: 100%;
+    min-height: 200px;
+    max-height:200px;
+    border-radius: 20px;
+}
+.event > span > img{
+    width: 20px;
+    border-radius: 50%;
+}
+.event > span{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+
+.title > h1{
+    font-size: 2rem;
+    color: #fff;
+}

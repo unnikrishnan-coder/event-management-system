@@ -1,0 +1,102 @@
+.artist_cards{
+    grid-area: third;
+    margin-bottom: 20px;
+}
+.artists{
+    display: grid;
+    grid: 
+    "linear vertical" 1fr
+    /1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+.linear_artist_section{
+    grid-area: linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.vertical_artist_section{
+    grid-area: vertical;
+}
+.artist{
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: #fff;
+    cursor:pointer;
+    display: flex;
+}
+.artist .p_h2{
+    font-size: 14px;
+}
+.artist .p_h3{
+    font-size: 14px;
+}
+.linear{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+.linear  .text_content{
+    margin: 0 10px;
+}
+.vertical{
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+}
+.vertical > img{
+    border-radius: 20px;
+    max-height: 140px;
+    object-fit: cover;
+    width: 100%;
+    margin: 0 auto;
+}
+.vertical .follow_btn{
+    margin-top: 5px;
+}
+.linear > img{
+    border-radius: 50%;
+    height: 50px;
+}
+.vertical > .text_content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.title > h1{
+    font-size: 2rem;
+    color: #fff;
+}
+.see_all{
+    color: rgb(234,78,79);
+    cursor: pointer;
+}
+.see_all > a{
+    text-decoration: none;
+    color: rgb(234,78,79);
+}
+.follow_btn{
+    font-size: 15px;
+    color: #fff;
+    background-color: #4f4f4f;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

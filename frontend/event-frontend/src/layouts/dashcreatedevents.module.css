@@ -1,0 +1,89 @@
+.reg_events_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(17,17,17);
+    border-radius: 20px;
+}
+.reg_events{
+    display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+}
+.event{
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 20px;
+    color: #fff;
+    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.event >img{
+    width: 100%;
+    min-height: 200px;
+    max-height:200px;
+    border-radius: 20px;
+}
+.event > span > img{
+    width: 20px;
+    border-radius: 50%;
+}
+.event > span{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+/* popup */
+.ticket_popup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgb(0, 0, 0);
+    width: 350px;
+    border-radius: 20px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 20;
+    text-align: center;
+    padding: 20px;
+}
+
+.ticket_popup > img{
+    width: 200px;
+}
+.ticket_popup > .close_popup{
+    color: #fff;
+    position: absolute;
+    top:5%;
+    right: 5%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.title > h1{
+    font-size: 2rem;
+    color: #fff;
+}
+.h1{
+    font-size: 2rem;
+    color: #fff; 
+}
+.btn_primary{
+    background-color: rgb(234,78,79);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}

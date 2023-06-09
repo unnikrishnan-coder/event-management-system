@@ -1,0 +1,75 @@
+.register_card{
+    grid-area: second;
+    padding: 20px;
+    margin-left: 20px;
+    background-color: rgb(0, 0, 0);
+    height: max-content;
+    border-radius: 20px;
+}
+.register_card>img{
+    max-height: 350px;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.share img{
+    width: 16px;
+    cursor: pointer;
+}
+.register_card > h1{
+    margin: 20px 0 20px 0;
+}
+.text_content{
+    display: grid;
+    grid: 
+    "venue cost" 1fr
+    "date org" 1fr
+    /1fr 1fr;
+    gap: 8px;
+    margin-top: 20px;
+}
+.venue{
+    grid-area: venue;
+}
+.cost{
+    grid-area: cost;
+}
+.date{
+    grid-area: date;
+}
+.organizer{
+    grid-area: org;
+}
+.register_card > button{
+    height: 50px;
+    font-size: 16px;
+    margin: 20px 0;
+}
+.share img{
+    margin: 5px 10px 0 0;
+}
+.p_h1,.p_h2{
+    color: #fff;
+    margin: 5px 0;
+    font-size:16px;
+}
+.p_h3{
+    color: #b0b0b0;
+    margin: 5px 0;
+    font-size: 14px;
+}
+.h1{
+    font-size: 2rem;
+    color: #fff;
+}
+.btn_primary{
+    background-color: rgb(234,78,79);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
