@@ -3,27 +3,21 @@ import styles from './payment.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import paths from '../paths';
+import { useAlert } from 'react-alert';
 
 function Payment() {
 
     const {name,event,cost,email,uid,eid} = useParams();
     const navigate = useNavigate();
-
+    const alert = useAlert();
     const handleSubmit = (e)=>{
         e.preventDefault();
         const data = {uid,eid};
         axios.post(paths.payment,data).then((res)=>{
-            console.log(res.data);
-            // let reg_events = localStorage.getItem('reg_events');
-            // if(reg_events){
-            //   reg_events.push(eid);
-            //   localStorage.setItem('reg_events',reg_events)
-            // }else{
-            //   localStorage.setItem('reg_events',[eid])
-            // }
+            alert.success(res.data);
             navigate('/dash/my-events')
         }).catch((err)=>{
-            window.alert(err);
+            alert.error(err);
         })
     }
   return (

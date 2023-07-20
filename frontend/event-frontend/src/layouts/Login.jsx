@@ -4,9 +4,12 @@ import inputStyles from './dashaddevent.module.css';
 import { Link,useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import paths from '../paths';
+import Logo from '../components/Logo';
+import {useAlert} from 'react-alert';
 
 function Login() {
   const navigate = useNavigate();
+  const alert = useAlert();
   const [username,setUsername] = useState('');
   const [password,setPassword] = useState('');
 
@@ -18,10 +21,12 @@ function Login() {
     }).then((res)=>{
       if(res.status===400){
         console.log(res.data);
+        alert.error(res.data)
       }else{
         const role = res.data.role;
         const user = JSON.stringify(res.data);
         localStorage.setItem('user',user);
+        alert.success("Login successfull")
         if(role==="viewer"){
           navigate('/dash/home');
         }else{
@@ -30,12 +35,13 @@ function Login() {
       }
     }).catch((err)=>{
       console.error(err);
+      alert.error(err.response.data)
     })
   }
   return (
     <div className={styles.wrapper}>
-    <div className={styles.logo}>
-          <Link to="/">Festy</Link>
+    <div >
+          <Link to="/"><Logo /></Link>
         </div>
     <div className={styles.login_container}>
         

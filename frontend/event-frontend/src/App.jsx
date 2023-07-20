@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import router from '../Router';
-import { RouterProvider } from 'react-router-dom';
-import Alert from './components/Alert';
+import React from 'react';
 import Router from '../Router';
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-basic'
+
+
+const options = {
+  // you can also just use 'bottom center'
+  position: positions.TOP_RIGHT,
+  timeout: 5000,
+  offset: '30px',
+  // you can also just use 'scale'
+  transition: transitions.SCALE
+}
 
 function App() {
-
-  const [alertData,setAlertData] = useState({});
-  const [alertState,setAlertState] = useState(false);
-
-  const setAlert = (data,state)=>{
-    console.log(data,state);
-    setAlertData(data);
-    setAlertState(state);
-  }
   return (
-    <>
-      {/* <Alert p={alertData} state={alertState}/> */}
-      <Router setAlert={setAlert}/>
-    </>
+    <AlertProvider template={AlertTemplate} {...options}>
+      <Router />
+    </AlertProvider>
   )
 }
 

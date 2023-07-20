@@ -1,0 +1,132 @@
+.add_artist_card{
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+.details{
+    display: grid;
+    grid: 
+    "ename ename " 1fr
+    "eimg eimg" 1fr
+    "desc desc" 1fr
+    "button button" 1fr
+    /1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+.details > *{
+    max-height: 50px;
+    margin: 20px 0;
+}
+.details > div{
+    position: relative;
+}
+.float_label{
+    font-size: 1rem;
+    color: #ffffff;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+    cursor: text;
+    background-color: #000;
+    letter-spacing: 1px;
+}
+
+.float_input:focus + .float_label::before,
+.float_input:valid + .float_label::before{
+    opacity: 1;
+    height: 90%;
+}
+.float_input:focus + .float_label::after,
+.float_input:valid + .float_label::after{
+    opacity: 1;
+    height: 90%;
+}
+.float_label::after,.float_label::before{
+    transition: height 90ms linear 90ms;
+    content: " | ";
+    opacity: 0;
+    height: 0;
+    width: 100%;
+    color: #bb00ff;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+.float_input:focus + .float_label,
+.float_input:valid + .float_label{
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-size: 0.9rem;
+}
+.float_input:focus,
+.float_input:valid{
+    border: 3px solid #bb00ff;
+}
+.ename_div {
+    grid-area: ename;
+}
+.desc_div {
+    grid-area: desc;
+}
+.eimg_div {
+    grid-area: eimg;
+    position: relative;
+}
+.eimg_div > label {
+    cursor: pointer;
+    width: 100%;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    height: 50px;
+    padding: 10px 0 10px 40px;
+    border-radius: 10px;
+    border: 5px solid #bb00ff;
+    font-size: 1rem;
+    overflow: hidden;
+}
+.eimg_div > label::before{
+    content: "Event Thumbnail";
+    position: absolute;
+    color: #fff;
+    top: -23px;
+    left: -5px;
+}
+.eimg_div img{
+    width: 20px;
+    position: absolute;
+    top: 23%;
+    left: 1%;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title > button{
+    width: 20%;
+    background-color: rgb(112, 78, 234);
+}
+.h1{
+    font-size: 2rem;
+    color: #fff;
+}
+.btn_primary{
+    grid-area: button;
+    background-color: rgb(234,78,79);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}

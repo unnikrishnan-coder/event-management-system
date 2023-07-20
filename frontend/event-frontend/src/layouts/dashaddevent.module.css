@@ -9,9 +9,10 @@
 .details{
     display: grid;
     grid: 
-    "ename ename location location" 1fr
+    "ename ename location availbtn" 1fr
+    "incharge inchargeemail inchargephone org" 1fr
     "sdate edate cost eimg" 1fr
-    "org artist desc desc" 1fr
+    "artist desc desc publish" 1fr
     "button button button button" 1fr
     /1fr 1fr 1fr 1fr;
     gap: 10px;
@@ -95,6 +96,25 @@
     grid-area: eimg;
     position: relative;
 }
+
+.incharge_div{
+    grid-area: incharge;
+}
+.inchargeemail_div{
+    grid-area: inchargeemail;
+}
+.inchargephone_div{
+    grid-area: inchargephone;
+}
+.publish_div{
+    grid-area: publish;
+}
+.availbtn{
+    grid-area:availbtn;
+}
+.submitbtn{
+    grid-area:button;
+}
 .eimg_div > label {
     cursor: pointer;
     width: 100%;
@@ -106,6 +126,7 @@
     border-radius: 10px;
     border: 5px solid #bb00ff;
     font-size: 1rem;
+    overflow: hidden;
 }
 .eimg_div > label::before{
     content: "Event Thumbnail";
@@ -123,13 +144,20 @@
 .location_div {
     grid-area: location;
 }
-
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title > button{
+    width: 20%;
+    background-color: rgb(112, 78, 234);
+}
 .h1{
     font-size: 2rem;
     color: #fff;
 }
 .btn_primary{
-    grid-area: button;
     background-color: rgb(234,78,79);
     color: #fff;
     border: none;
@@ -138,4 +166,54 @@
     cursor: pointer;
     width: 100%;
     font-size: 1rem;
+}
+
+/* image popup */
+.openimagepop{
+    background-color: rgb(210, 114, 114);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 1rem;
+
+}
+.imgpopup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: auto;
+    height: 50vh;
+    border-radius: 10px;
+    background-color: #484848;
+    padding: 10px;
+    z-index: 100;
+}
+.imgpopup > img{
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 80%;
+    border-radius: 10px;
+    z-index: 101;
+    margin: auto;
+}
+.imgclosePop{
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 101;
+}
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: inherit;
 }

@@ -42,13 +42,13 @@
 /* popup */
 .ticket_popup{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
     background: rgb(0, 0, 0);
-    width: 350px;
+    width: 80%;
     border-radius: 20px;
-    height: 500px;
+    height: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -57,9 +57,25 @@
     text-align: center;
     padding: 20px;
 }
-
-.ticket_popup > img{
+.ticket_popup > .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+.left,.right{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 50%;
+    flex-direction: column;
+    height: 100%;
+    margin: 10px;
+}
+.ticket_popup img{
     width: 200px;
+    display: block;
 }
 .ticket_popup > .close_popup{
     color: #fff;
@@ -69,12 +85,32 @@
     font-size: 2rem;
     cursor: pointer;
 }
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .title > h1{
     font-size: 2rem;
     color: #fff;
 }
+.title > .filter{
+    width: 50%;
+    position: relative;
+    right: -17%;
+}
+.filter > select{
+    width: 40%;
+}
+.filter > *{
+    height: 100%;
+}
+.filter > button{
+    width: 20%;
+    margin-left: 20px;
+}
 .h1{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #fff; 
 }
 .btn_primary{

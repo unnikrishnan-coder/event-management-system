@@ -1,0 +1,63 @@
+.all_venues_main{
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+.h1{
+    font-size: 2rem;
+    color: #fff;
+}
+.btn_primary{
+    grid-area: button;
+    background-color: rgb(234,78,79);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.editbtn{
+    background-color: rgb(0 229 0 / 49%);
+}
+.dltbtn{
+ background-color: rgb(210, 28, 28);
+}
+.all_venues{
+    display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+}
+.venue{
+    background-color: rgb(29, 29, 29);
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 20px;
+    color: #fff;
+    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.venue >img{
+    width: 100%;
+    min-height: 200px;
+    max-height:200px;
+    border-radius: 20px;
+}
+.venue > span > img{
+    width: 20px;
+    border-radius: 50%;
+}
+.venue > span{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}

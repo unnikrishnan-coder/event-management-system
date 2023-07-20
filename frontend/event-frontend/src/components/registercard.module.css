@@ -1,10 +1,17 @@
 .register_card{
     grid-area: second;
-    padding: 20px;
+    padding: 10px;
     margin-left: 20px;
     background-color: rgb(0, 0, 0);
-    height: max-content;
-    border-radius: 20px;
+    height: 100vh;
+    overflow-y:scroll;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 400px;
+}
+.register_card::-webkit-scrollbar{
+    display: none;
 }
 .register_card>img{
     max-height: 350px;
@@ -23,8 +30,11 @@
 .text_content{
     display: grid;
     grid: 
+    "desc desc" 1fr
     "venue cost" 1fr
     "date org" 1fr
+    "artist artist"
+    "incharge incharge"
     /1fr 1fr;
     gap: 8px;
     margin-top: 20px;
@@ -40,6 +50,15 @@
 }
 .organizer{
     grid-area: org;
+}
+.artist{
+    grid-area: artist;
+}
+.desc{
+    grid-area: desc;
+}
+.incharge{
+    grid-area: incharge;
 }
 .register_card > button{
     height: 50px;
